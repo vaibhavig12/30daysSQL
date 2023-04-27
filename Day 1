@@ -1,0 +1,115 @@
+Q.What is the syntax for creating a new table in SQL using the CREATE statement?
+--CREATE TABLE table_name
+(column_name1 datatype (size),
+column_name2 datatype (size),
+.
+.
+.
+column_namen datatype (size));
+we can make any column as primary whilte creating table or even after making table using alter statement
+-to create a primary key on a single column
+ALTER TABLE tablename
+ADD PRIMARY KEY(column_name);
+-to create a primary key on multiple column
+ALTER TABLE tablename
+ADD CONSTRAINT contraint_name PRIMARY KEY (column name1,column name2);
+
+Q.What are some common data types used in SQL, and how are they specified when creating a table?
+
+1-INT or INTEGER: Integer data type for whole numbers, typically used for numeric identifiers or counters.
+2-BIGINT: Similar to INT, but with a larger range for values.
+3-DECIMAL(precision, scale): A fixed-point decimal data type with a specified precision and scale.
+4-FLOAT: Floating-point numeric data type with decimal precision.
+5-CHAR(length): Fixed-length character string data type with a specified length.
+6-VARCHAR(length): Variable-length character string data type with a specified maximum length.
+7-DATE: Date data type for dates without a specific time.
+8-DATETIME or TIMESTAMP: Date and time data type for dates with a specific time.
+
+
+Q.How can you set a primary key for a table when using the CREATE statement?
+--CREATE TABLE table_name
+(column_name1 datatype (size) PRIMARY KEY,
+column_name2 datatype (size),
+.
+.
+.
+column_namen datatype (size));
+
+Q.What is the purpose of the NOT NULL constraint, and how is it specified in a CREATE statement?
+NOT NULL CONSTRAINT will not have null values in column
+--CREATE TABLE table_name
+(column_name1 datatype (size) PRIMARY KEY,
+column_name2 datatype (size) NOT NULL,
+.
+.
+.
+column_namen datatype (size));
+
+Q.How can you set a foreign key for a table when using the CREATE statement, and why is this important?
+--CREATE TABLE table_name
+(column_name1 datatype (size) PRIMARY KEY,
+column_name2 datatype (size) NOT NULL,
+FOREIGN KEY (column_name3) REFERENCES other_table(other_column1),
+.
+.
+column_namen datatype (size));
+Setting foreign keys is important because it helps maintain data integrity and consistency between tables. 
+It ensures that the values in the referencing table (the table with the foreign 
+key constraint) match the values in the referenced table (the table that is being referenced). 
+It also helps enforce referential integrity, which means that any actions performed on the 
+referenced table (such as deleting a row) are reflected in the referencing table. 
+This can prevent data inconsistencies or orphaned records in the database.
+
+Q.How can you create an index on a table using the CREATE statement, and what is the purpose of an index?
+--CREATE TABLE table_name
+(column_name1 datatype (size) PRIMARY KEY,
+column_name2 datatype (size) NOT NULL,
+FOREIGN KEY (column_name3) REFERENCES other_table(other_column1),
+INDEX index_name column_name2 datatype (size) NOT NULL,
+
+.
+.
+column_namen datatype (size));
+
+The purpose of an index is to speed up queries on a table. When you create an index on one or more columns of a table, 
+it creates a separate data structure that allows the database to look up records based on the indexed columns much faster. 
+This is because the database can use the index to quickly locate the records that match a certain value or range of values.
+--specifying index on column after creating table
+CREATE INDEX index_name ON table_name (column1, column2, ...);
+
+However, indexes come with a cost. They take up disk space and can slow down inserts, updates, and deletes on the table
+because the database needs to update the index as well as the table itself. Therefore, it's important to use indexes judiciously and 
+only create them on columns that are frequently used in queries and have high selectivity (meaning that they have a large number of distinct values).
+
+Q.What are some best practices for naming tables and columns when using the CREATE statement in SQL?
+using CamelCase
+using underscores instead of spaces
+using lowercase
+avoid reserved keywords
+
+
+Q.What permissions are required to execute a CREATE statement in SQL, and how can you check if you have the necessary permissions?
+CREATE & ALTER permissions
+-SHOW GRANTS FOR user;
+
+Q.Can you use the CREATE statement to modify an existing table in SQL, or is it only used for creating new tables?
+the CREATE statement is only used for creating new tables, while the ALTER statement is used for modifying existing tables.
+
+Q.How can you use the IF NOT EXISTS clause in a CREATE statement to avoid errors when creating a table that already exists in the database?
+Yes, We can use.
+--CREATE TABLE IF NOT EXISTS table_name
+(column_name1 datatype (size) PRIMARY KEY,
+column_name2 datatype (size) NOT NULL,
+FOREIGN KEY (column_name3) REFERENCES other_table(other_column1),
+INDEX index_name column_name2 datatype (size) NOT NULL,
+
+.
+.
+column_namen datatype (size));
+
+
+
+
+
+
+
