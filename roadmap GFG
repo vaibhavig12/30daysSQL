@@ -1,0 +1,67 @@
+Day 1 to Day 6:
+Start with the basic concepts: From Day 1 to Day 6, you’ll be knowing the basic database and SQL concepts such as creating a database, SELECT Clause, etc. 
+
+Creating Database: This concept will make you learn how to create your own database.
+Creating Tables and adding data: From this concept, you will learn how to create tables inside the database and insert data into them.
+SELECT Clause: Retrieve or fetch data from a database.
+FROM Clause: From which table in the database do you have to select data?
+WHERE Clause: It forms the condition based on which data have to be queried.
+DELETE Statement: For deletion tasks.
+INSERT INTO: For insertion tasks.
+AND and OR operator: Selecting data based on AND or operator.
+Drop and Truncate: It will drop or truncate the collection as per the condition.
+NOT Operator: It will select the data which is not based on the given condition.
+Day 7 to Day 12:
+From Day 7 to Day 12, you’ll take a step forward and learn a few advanced concepts like nested queries, wildcard operators, and other clauses.
+
+WITH Clause: Understanding the concept of with clause and using it to give the sub-query block a name.
+FETCH Clause: It will fetch the filtered data based upon certain conditions like fetching only the top 3 rows.
+Arithmetic Operators: Using arithmetic operators to filter the data conveniently and precisely.
+Wildcard Operators: To intelligently select the exact data like names starting or ending with T.
+UPDATE Statement:  Updating certain data entries based upon the condition provided.
+ALTER Table: Adding, dropping, or modifying the table based on the given condition.
+LIKE Clause: It will follow the pattern given on the condition for search.
+BETWEEN and IN operator:  It will select the data range between or in the given condition.
+CASE Statement: It will check for the conditionals and will query the data as per the respective case.
+EXISTS: It will form the nested query to filter out the data which exists in another query.
+Day 13 to Day 18:
+From Day 13 to Day 18, you’ll be mainly learning the Aggregate functions in SQL.
+
+DISTINCT Clause: It will select only the distinct data, not repetitive.
+Count Function: Returns the total count of the data filtered.
+Sum Function: Return the sum of all the data being queried.
+Average Function: Return the average of all the data being queried.
+Minimum Function: It will return the minimum data from the whole data that is being queried.
+Maximum Function: It will return the maximum data from the whole data that is being queried.
+ORDER BY: This statement will order the queried data as per your convenience in ascending or descending order.
+GROUP BY: This statement will group all your queried data with the column given in the condition.
+ALL and ANY Clause: They are logical operators in SQL and return boolean values as a result.
+TOP Clause: Used to fetch the limited number of rows from a database.
+Day 19 to Day 24:
+From Day 19 to 24, you’ll be learning and practicing the Joins in SQL. It is one of the most important concepts of SQL. 
+
+Union Clause: Just like the mathematical union operator, this clause will make the union of the tables given.
+Intersection Clause: It will join the two or more tables where they are intersecting.
+Aliases: It will give an alias to the table which we can refer to later.
+Cartesian Join and Self Join: Sometimes to query out some data, we have to self join the table to itself.
+Inner, Left, Right and Full Joins: These four types of joining comes into play when we have to join one table with another. Look upon their syntax and learn to deal with these joins.
+Division Clause: Division is typically required when you want to find out entities that are interacting with all entities of a set of different types of entities.
+Using Clause: If several columns have the same names but the datatypes do not match, the NATURAL JOIN clause can be modified with the USING clause to specify the columns that should be used for an EQUIJOIN.
+Combining values: Combining aggregate and non-aggregate values in SQL using Joins and Over clause.
+MINUS Operator: It is used as “except” which means it will join the two intersecting tables and will minus one table so that only the intersection and the other table are covered.
+Joining 3 or more tables: Although used very rarely but this will make you learn and understand how to join 3 or more tables and then carry out the querying operations.
+Day 25 to Day 30:
+Miscellaneous: Since we have covered almost all the topics, we shall now move on to some of the miscellaneous topics, concepts, and functions. These are important parts of DBMS and SQL and will surely help you in your college exams and competitive exams like GATE CS. 
+
+Views
+Creating Roles
+Constraints
+Transactions
+Mathematical functions
+Date functions
+Conditional Expressions
+General functions 
+String functions
+Conversion Function
+Top-N Queries
+Advanced Functions
