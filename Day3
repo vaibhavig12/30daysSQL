@@ -1,0 +1,66 @@
+Q.What is the DELETE statement in SQL, and how is it used?
+DELETE IS DML command
+DELETE TABLE will keep structure of table
+data will be deleted from table depends on the condition.
+  
+Q.What is the syntax of the DELETE statement in SQL?
+--DELETE FROM table_name
+  WHERE condition
+
+Q.What happens when you execute a DELETE statement without a WHERE clause in SQL?
+ it will remove all rows from the specified table, effectively deleting all the data in the table. 
+ 
+Q.How can you use the WHERE clause with the DELETE statement in SQL to delete specific rows from a table?
+--DELETE FROM table_name
+  WHERE condition
+
+Q.How can you use the JOIN clause with the DELETE statement in SQL to delete rows from multiple tables?
+--DELETE FROM table_1
+JOIN table_2
+ON table_1.column=table_2.column
+WHERE condition
+The JOIN condition is specified using the ON keyword, and it determines which rows to delete from both tables. 
+You can use any comparison operator in the condition to join the tables.
+
+Q.How can you use the RETURNING clause with the DELETE statement in SQL to return the deleted rows?
+The RETURNING clause in SQL is used to return the data affected by a DML (Data Manipulation Language) statement, such as DELETE. 
+It allows you to retrieve the rows that were deleted by the DELETE statement, so you can verify what data was deleted or use it for further processing.
+--DELETE FROM table_name
+WHERE condition
+RETURNING column_list;
+
+
+Q.How can you use subqueries with the DELETE statement in SQL to delete rows based on values retrieved from another table or subquery?
+--DELETE FROM table_name
+WHERE column_name IN (SELECT column_name FROM other_table/subquery);
+
+Q.How can you ensure data integrity when using the DELETE statement in SQL?
+When using the DELETE statement in SQL, it's important to ensure data integrity to prevent unintended data loss or corruption. 
+Here are some ways you can ensure data integrity:
+
+Use transactions: Wrap the DELETE statement in a transaction to ensure that either all the intended rows are deleted or none of them are deleted. 
+If an error occurs during the transaction, it can be rolled back to avoid partial deletes.
+
+Use foreign key constraints: Set up foreign key constraints between tables to prevent the deletion of parent rows when child rows exist. 
+This ensures that data in related tables remains consistent and prevents orphaned records.
+
+Use cascading deletes: If you do want to delete parent rows, consider using cascading deletes to automatically delete any child rows as well. 
+This can help ensure that all related data is deleted and avoids orphaned records.
+
+Use triggers: You can use triggers to enforce additional rules or checks before the DELETE statement is executed. 
+For example, you could use a trigger to prevent certain rows from being deleted or to log all deleted data.
+
+Use backup and restore: Always make sure to have a backup of your database before executing any DELETE statements. 
+This way, you can restore the database to a previous state if necessary.
+
+By using these techniques, you can help ensure data integrity when using the DELETE statement in SQL.
+
+
+Q.How can you recover deleted data in SQL if a mistake is made?
+Check the transaction log: The transaction log records all transactions that occur in the database. 
+You can use a database recovery tool to read the transaction log and find the deleted data.
+
+Restore from backup: If you have a backup file, you can restore the database to a point in time before the data was deleted. This will restore the deleted data.
+
+Use a third-party tool: There are several third-party tools available that can recover deleted data in SQL. 
+These tools work by scanning the database for deleted data and restoring it.
