@@ -1,1 +1,55 @@
 #Insert
+Q.How do you insert a single row into a table using the INSERT statement?
+Insert into Table_name (col1,col2,col3) values(val1,val2,val3);
+
+Q.What is the syntax for inserting multiple rows into a table using the INSERT statement?
+Insert into Table_name (col1,col2,col3) values(val1,val2,val3),
+                                                (val1,val2,val3),
+                                                (val1,val2,val3);
+
+Q.Can you insert data into specific columns of a table using the INSERT statement? If so, how?
+Yes we can!
+INSERT INTO employees (employee_name)
+VALUES ('John Doe');
+Note that if you only want to insert values into a subset of columns, you need to provide values for each of those columns in the order in which they appear in the column list. 
+If you don't want to provide a value for a column, you can either omit it from the column list or provide a default value or NULL value.
+
+Q.How do you insert data into a table using values from another table?
+INSERT INTO table_name (column1, column2, ...)
+SELECT column1, column2, ...
+FROM source_table_name
+WHERE condition;
+
+SQL Server
+SELECT *
+INTO new_table_name
+FROM source_table_name
+WHERE condition;
+
+Q.Is it possible to insert data into a table with an AUTO_INCREMENT column? If so, how?
+Yes, it is possible to insert data into a table with an AUTO_INCREMENT column in SQL.
+When you insert a new row into a table with an AUTO_INCREMENT column, the database system automatically generates a unique value for that column.
+To insert data into a table with an AUTO_INCREMENT column, you can use the INSERT INTO statement 
+and omit the AUTO_INCREMENT column from the list of columns. The basic syntax of the statement is:
+--INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+Note that some database systems may have different syntax for working with AUTO_INCREMENT columns. 
+For example, in MySQL, you can use the LAST_INSERT_ID() function to retrieve the AUTO_INCREMENT value generated for the last row that was inserted.
+
+Q.Can you insert NULL values into a table using the INSERT statement? If so, how?
+Yes,
+Yes, it is possible to insert NULL values into a table using the INSERT statement in SQL. 
+To insert a NULL value into a column, you can simply omit the value or use the keyword NULL in the VALUES clause of the INSERT statement.
+Note that some database systems may have different syntax for inserting NULL values.
+For example, in Oracle, you can use the keyword NULL or the keyword DEFAULT to insert a NULL value.
+
+Q.What happens if you try to insert a row into a table with a duplicate primary key using the INSERT statement?
+If you try to insert a row into a table with a duplicate primary key using the INSERT statement, 
+the database system will raise a primary key violation error and the INSERT operation will fail.
+
+Q.How do you insert data into a table with a foreign key constraint? What considerations do you need to make when doing this?
+Insert into table
+()
+How do you insert data into a table using a subquery?
+
+What are some best practices for using the INSERT statement in SQL?
